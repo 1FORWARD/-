@@ -1,0 +1,27 @@
+#include "control.h"
+
+void RightForward(int PWM)
+{
+
+}
+
+void LiftForward(int PWM)
+{
+
+}
+
+void RightBack(int PWM)
+{
+
+}
+
+
+void LiftBack(int PWM)
+{
+
+}
+
+void Stop(void)
+{
+
+}

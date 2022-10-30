@@ -1,0 +1,102 @@
+standard
+***Report Model: SF1_SOC Device: SF1S60CG121I***
+
+IO Statistics
+#IO                        21
+  #input                    6
+  #output                  15
+  #inout                    0
+
+Utilization Statistics
+#lut                     1859   out of   5824   31.92%
+#reg                      965   out of   5824   16.57%
+#le                      2050
+  #lut only              1085   out of   2050   52.93%
+  #reg only               191   out of   2050    9.32%
+  #lut&reg                774   out of   2050   37.76%
+#dsp                        0   out of     10    0.00%
+#bram                       0   out of     26    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#hard-ip                    1
+  #mcu                      1   out of      1  100.00%
+  #dsc                      0   out of      1    0.00%
+  #dsi                      0   out of      2    0.00%
+  #psram controller         0   out of      2    0.00%
+#pad                       21   out of     55   38.18%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#pll                        1   out of      2   50.00%
+#gclk                      11   out of     16   68.75%
+
+Clock Resource Statistics
+Index     ClockNet                  Type               DriverType         Driver                             Fanout
+#1        u_pll/clk0_buf            GCLK               pll                u_pll/pll_inst.clkc0               413
+#2        u_ahb_pwm/pwm7/clk_div    GCLK               mslice             u_ahb_pwm/pwm7/clk_div_syn_7.f1    20
+#3        u_ahb_pwm/pwm0/clk_div    GCLK               lslice             u_ahb_pwm/pwm0/clk_div_syn_7.f1    19
+#4        u_ahb_pwm/pwm1/clk_div    GCLK               lslice             u_ahb_pwm/pwm1/clk_div_syn_7.f1    19
+#5        u_ahb_pwm/pwm2/clk_div    GCLK               mslice             u_ahb_pwm/pwm2/clk_div_syn_7.f1    19
+#6        u_ahb_pwm/pwm3/clk_div    GCLK               lslice             u_ahb_pwm/pwm3/clk_div_syn_7.f1    19
+#7        u_ahb_pwm/pwm4/clk_div    GCLK               lslice             u_ahb_pwm/pwm4/clk_div_syn_7.f1    19
+#8        u_ahb_pwm/pwm5/clk_div    GCLK               mslice             u_ahb_pwm/pwm5/clk_div_syn_7.f1    19
+#9        u_ahb_pwm/pwm6/clk_div    GCLK               mslice             u_ahb_pwm/pwm6/clk_div_syn_7.f1    19
+#10       I_clk_25m_dup_1           GCLK               io                 I_clk_25m_syn_2.di                 1
+
+
+Detailed IO Report
+
+     Name       Direction    Location    IOStandard    DriveStrength    PullType    PackReg  
+  I_clk_25m       INPUT         D7        LVCMOS18          N/A          PULLUP      NONE    
+  I_jtag_tck      INPUT         C7        LVCMOS18          N/A          PULLUP      NONE    
+  I_jtag_tdi      INPUT         D5        LVCMOS18          N/A          PULLUP      NONE    
+  I_jtag_tms      INPUT         D6        LVCMOS18          N/A          PULLUP      NONE    
+   I_rst_n        INPUT         J2        LVCMOS18          N/A          PULLUP      NONE    
+  I_uart_rx       INPUT         G3        LVCMOS18          N/A          PULLUP      NONE    
+  O_jtag_tdo     OUTPUT         C6        LVCMOS18           8            NONE       NONE    
+    O_led0       OUTPUT         J5        LVCMOS18           8            NONE       NONE    
+    O_led1       OUTPUT         H5        LVCMOS18           8            NONE       NONE    
+    O_led2       OUTPUT         G4        LVCMOS18           8            NONE       NONE    
+   O_pwm[7]      OUTPUT        B11        LVCMOS18           8            NONE       NONE    
+   O_pwm[6]      OUTPUT        B10        LVCMOS18           8            NONE       NONE    
+   O_pwm[5]      OUTPUT        A11        LVCMOS18           8            NONE       NONE    
+   O_pwm[4]      OUTPUT        A10        LVCMOS18           8            NONE       NONE    
+   O_pwm[3]      OUTPUT        F11        LVCMOS18           8            NONE       NONE    
+   O_pwm[2]      OUTPUT        E11        LVCMOS18           8            NONE       NONE    
+   O_pwm[1]      OUTPUT        C11        LVCMOS18           8            NONE       NONE    
+   O_pwm[0]      OUTPUT        C10        LVCMOS18           8            NONE       NONE    
+  O_uart_tx      OUTPUT         B9        LVCMOS18           8            NONE       NONE    
+     sck         OUTPUT         L2        LVCMOS18           8            NONE       NONE    
+     sda         OUTPUT         L4        LVCMOS18           8            NONE       NONE    
+
+Report Hierarchy Area:
++--------------------------------------------------------------------------+
+|Instance    |Module  |le     |lut     |ripple  |seq     |bram    |dsp     |
++--------------------------------------------------------------------------+
+|top         |SF1_SOC |2050   |1331    |528     |965     |0       |0       |
+|  u_SF1_MCU |SF1_MCU |0      |0       |0       |0       |0       |0       |
+|  u_ahb_pwm |ahb_pwm |2050   |1331    |528     |965     |0       |0       |
+|    pwm0    |counter |174    |111     |63      |41      |0       |0       |
+|    pwm1    |counter |174    |111     |63      |48      |0       |0       |
+|    pwm2    |counter |174    |111     |63      |48      |0       |0       |
+|    pwm3    |counter |173    |110     |63      |44      |0       |0       |
+|    pwm4    |counter |174    |111     |63      |48      |0       |0       |
+|    pwm5    |counter |175    |112     |63      |49      |0       |0       |
+|    pwm6    |counter |168    |105     |63      |43      |0       |0       |
+|    pwm7    |counter |220    |133     |87      |49      |0       |0       |
+|  u_pll     |pll     |0      |0       |0       |0       |0       |0       |
++--------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout     Nets  
+    #1          1       1736  
+    #2          2       567   
+    #3          3       326   
+    #4          4        24   
+    #5        5-10       33   
+    #6        11-50      73   
+    #7       51-100      1    
+    #8       101-500     3    
+  Average     2.35            

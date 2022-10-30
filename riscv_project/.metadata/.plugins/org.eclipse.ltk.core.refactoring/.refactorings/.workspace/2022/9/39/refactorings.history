@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;pwm_demo/application/Device/pwm.c&apos;" deleteContents="false" description="Delete resource &apos;pwm_demo/application/Device/pwm.c&apos;" element1="/pwm_demo/application/Device/pwm.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1663566025361"/>
+</session>

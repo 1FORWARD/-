@@ -1,0 +1,43 @@
+#include "control.h"
+
+/* ch:  0 ,1 for two wheels, 2 for direction , 3 for capture
+ * div  设置预分频为div分频 100MHz输入，则pwm的时钟clk为100/(div+1) MHz
+ * period 设置周期为  clk/period = frequency
+ * duty  设置占空比为duty/period*100%=50%
+ *
+ */
+void setpwm(uint8_t ch, uint8_t div, uint32_t period, uint32_t duty)
+{
+	set_pwm_clkdiv(ch, div);
+	set_pwm_period(ch, period);
+	set_pwm_duty(ch, duty);
+	pwm_cmd(ch, ENABLE);
+
+}
+
+
+void RightForward(int PWM)
+{
+
+}
+
+void LiftForward(int PWM)
+{
+
+}
+
+void RightBack(int PWM)
+{
+
+}
+
+
+void LiftBack(int PWM)
+{
+
+}
+
+void Stop(void)
+{
+
+}

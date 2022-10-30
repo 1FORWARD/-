@@ -1,0 +1,164 @@
+============================================================
+   Tang Dynasty, V5.6.59063
+   Copyright (c) 2012-2022 Anlogic
+   Executable = D:/TD_anlu/bin/td.exe
+   Built at =   12:45:13 Sep  6 2022
+   Run by =     HW
+   Run Date =   Sat Oct  8 21:46:44 2022
+
+   Run on =     LAPTOP-UGI9IIEM
+============================================================
+RUN-001 : GUI based run...
+RUN-1002 : start command "import_device sf1_6.db -package SF1S60CG121I -basic"
+ARC-1001 : Device Initialization.
+ARC-1001 : -------------------------------------------------
+ARC-1001 :       OPTION       |      IO       |   SETTING   
+ARC-1001 : -------------------------------------------------
+ARC-1001 :        done        |      B4       |    gpio    
+ARC-1001 :        initn       |      A5       |    gpio    
+ARC-1001 :       jtagen       |      B7       |    gpio    
+ARC-1001 :      programn      |      B5       |  dedicate  
+ARC-1001 :   tdi/tms/tck/tdo  |  C4/A6/A7/C5  |  dedicate  
+ARC-1001 : -------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "set_param flow syn_ip_flow ip"
+RUN-1002 : start command "set_param rtl keep_hierarchy flatten"
+RUN-1002 : start command "read_verilog -file uart.v"
+HDL-1007 : analyze verilog file uart.v
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-1007 : back to file 'uart.v' in uart.v(186)
+HDL-1007 : undeclared symbol '**', assumed default net type '**' in encrypted_text(0)
+HDL-1007 : back to file 'uart.v' in uart.v(612)
+HDL-1007 : elaborate module uart in uart.v(25)
+HDL-1007 : elaborate module ** in encrypted_text(0)
+HDL-1007 : elaborate module ** in encrypted_text(0)
+HDL-7007 CRITICAL-WARNING: case condition never applies in encrypted_text(0)
+HDL-1007 : elaborate module ** in encrypted_text(0)
+HDL-1200 : Current top model is uart
+HDL-1100 : Inferred 0 RAMs.
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/TD_anlu/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |     ip     |       off        |   *    
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |  flatten   |       auto       |   *    
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+SYN-1012 : SanityCheck: Model "uart"
+SYN-1012 : SanityCheck: Model "clk_div(CLK_DIV_NUM=27)"
+SYN-1012 : SanityCheck: Model "uart_rx(DATA_BIT=8,STOP_BIT="1")"
+SYN-1012 : SanityCheck: Model "uart_tx(DATA_BIT=8,PARITY_BIT="Odd",STOP_BIT="1")"
+SYN-1011 : Flatten model uart
+SYN-1032 : 455/75 useful/useless nets, 186/0 useful/useless insts
+SYN-1016 : Merged 14 instances.
+SYN-1032 : 389/87 useful/useless nets, 155/26 useful/useless insts
+SYN-1016 : Merged 18 instances.
+SYN-1032 : 380/0 useful/useless nets, 340/12 useful/useless insts
+SYN-1014 : Optimize round 1
+SYN-1021 : Optimized 1 onehot mux instances.
+SYN-1020 : Optimized 42 distributor mux.
+SYN-1001 : Optimize 3 less-than instances
+SYN-1019 : Optimized 1 mux instances.
+SYN-1016 : Merged 57 instances.
+SYN-1015 : Optimize round 1, 185 better
+SYN-1014 : Optimize round 2
+SYN-1032 : 330/3 useful/useless nets, 290/57 useful/useless insts
+SYN-1015 : Optimize round 2, 61 better
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+RUN-1002 : start command "optimize_gate -release uart_gate.v"
+RUN-1001 : Open license file D:/TD_anlu/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |     ip     |       off        |   *    
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Gate Property
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :          Parameters         |  Settings  |  Default Values  |  Note  
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :         cascade_dsp         |    off     |       off        |        
+RUN-1001 :         cascade_eram        |    off     |       off        |        
+RUN-1001 :        gate_sim_model       |    off     |       off        |        
+RUN-1001 :        map_sim_model        |    off     |       off        |        
+RUN-1001 :         map_strategy        |     1      |        1         |        
+RUN-1001 :           opt_area          |   medium   |      medium      |        
+RUN-1001 :          opt_timing         |    auto    |       auto       |        
+RUN-1001 :         pack_effort         |   medium   |      medium      |        
+RUN-1001 :      pack_lslice_ripple     |     on     |        on        |        
+RUN-1001 :   pack_lslice_ripple_ratio  |    0.5     |       0.5        |        
+RUN-1001 :        pack_seq_in_io       |    auto    |       auto       |        
+RUN-1001 :        ph1_mux_ratio        |    1.0     |       1.0        |        
+RUN-1001 :            report           |  standard  |     standard     |        
+RUN-1001 :           retiming          |    off     |       off        |        
+RUN-1001 : ------------------------------------------------------------------
+RUN-1002 : start command "update_pll_param -module uart"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-2571 : Optimize after map_dsp, round 1, 0 better
+SYN-1001 : Throwback 2 control mux instances
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 30 instances.
+SYN-2501 : Optimize round 1, 124 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Map 12 macro adder
+SYN-1019 : Optimized 50 mux instances.
+SYN-1016 : Merged 9 instances.
+SYN-1032 : 592/52 useful/useless nets, 553/0 useful/useless insts
+SYN-3001 : Running gate level optimization.
+SYN-2581 : Mapping with K=5, #lut = 150 (3.81), #lev = 4 (3.36)
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 146 (3.87), #lev = 4 (3.27)
+SYN-3001 : Logic optimization runtime opt =   0.04 sec, map =   0.00 sec
+SYN-3001 : Mapper mapped 448 instances into 146 LUTs, name keeping = 50%.
+RUN-1002 : start command "write_verilog -nolf -hidename uart_gate.v"
+HDL-1201 : write out verilog file uart_gate.v
+GUI-2000 : The IP files have been created successfully :{SF1S60CG121I(D:/a_FPGA_Project/SF1_PWM/td_project/al_ip/uart.ipc)}

@@ -1,0 +1,41 @@
+=========================================================================================================
+Auto created by Tang Dynasty v5.6.59063
+Copyright (c) 2012-2022 Anlogic
+Sat Oct 29 10:08:08 2022
+=========================================================================================================
+
+
+Top Model:                SF1_SOC                                                         
+Device:                   sf1_6                                                           
+Timing Constraint File:                                                                   
+STA Level:                Detail                                                          
+Speed Grade:              NA                                                              
+
+=========================================================================================================
+Timing summary:                                                                           
+---------------------------------------------------------------------------------------------------------
+Constraint path number: 0 (STA coverage = 0.00%)
+Timing violations: 0 setup errors, and 0 hold errors.
+Minimal setup slack: infinity, minimal hold slack: infinity
+
+Timing group statistics: 
+	Clock constraints: 
+	  No constraint path
+	Minimum input arrival time before clock: no constraint path
+	Maximum output required time after clock: no constraint path
+	Maximum combinational path delay: no constraint path
+
+
+Warning: No clock constraint on 10 clock net(s): 
+	I_clk_25m_dup_1
+	u_ahb_pwm/I_ahb_clk
+	u_ahb_pwm/pwm0/clk_div_syn_3
+	u_ahb_pwm/pwm1/clk_div_syn_3
+	u_ahb_pwm/pwm2/clk_div_syn_3
+	u_ahb_pwm/pwm3/clk_div_syn_3
+	u_ahb_pwm/pwm4/clk_div_syn_3
+	u_ahb_pwm/pwm5/clk_div_syn_3
+	u_ahb_pwm/pwm6/clk_div_syn_3
+	u_ahb_pwm/pwm7/clk_div_syn_3
+
+---------------------------------------------------------------------------------------------------------

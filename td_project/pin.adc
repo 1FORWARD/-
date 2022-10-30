@@ -1,0 +1,25 @@
+set_pin_assignment	{ I_clk_25m }	{ LOCATION = D7; }
+set_pin_assignment	{ I_jtag_tck }	{ LOCATION = C7; }
+set_pin_assignment	{ I_jtag_tdi }	{ LOCATION = D5; }
+set_pin_assignment	{ I_jtag_tms }	{ LOCATION = D6; }
+set_pin_assignment	{ I_rst_n }	{ LOCATION = J2; }
+set_pin_assignment	{ I_uart_rx }	{ LOCATION = G3; }
+set_pin_assignment	{ O_jtag_tdo }	{ LOCATION = C6; }
+set_pin_assignment	{ O_led0 }	{ LOCATION = J5; }
+set_pin_assignment	{ O_led1 }	{ LOCATION = H5; }
+set_pin_assignment	{ O_led2 }	{ LOCATION = G4; }
+set_pin_assignment	{ O_pwm[0] }	{ LOCATION = C10; }
+set_pin_assignment	{ O_pwm[1] }	{ LOCATION = C11; }
+set_pin_assignment	{ O_pwm[2] }	{ LOCATION = E11; }
+set_pin_assignment	{ O_pwm[3] }	{ LOCATION = F11; }
+set_pin_assignment	{ O_pwm[4] }	{ LOCATION = A10; }
+set_pin_assignment	{ O_pwm[5] }	{ LOCATION = A11; }
+set_pin_assignment	{ O_pwm[6] }	{ LOCATION = B10; }
+set_pin_assignment	{ O_pwm[7] }	{ LOCATION = B11; }
+set_pin_assignment	{ O_uart_tx }	{ LOCATION = B9; }
+set_pin_assignment	{ sck }	{ LOCATION = L2; }
+set_pin_assignment	{ sda }	{ LOCATION = L4; }
+
+
+                                
+

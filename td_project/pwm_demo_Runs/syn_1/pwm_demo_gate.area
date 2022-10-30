@@ -1,0 +1,53 @@
+standard
+***Report Model: SF1_SOC Device: SF1S60CG121I***
+
+IO Statistics
+#IO                        21
+  #input                    6
+  #output                  15
+  #inout                    0
+
+LUT Statistics
+#Total_luts              2175
+  #lut4                   675
+  #lut5                   124
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b            1376
+
+Utilization Statistics
+#lut                     2175   out of   5824   37.35%
+#reg                      965   out of   5824   16.57%
+#le                         0
+#dsp                        0   out of     10    0.00%
+#bram                       0   out of     26    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#hard-ip                    1
+  #mcu                      1   out of      1  100.00%
+  #dsc                      0   out of      1    0.00%
+  #dsi                      0   out of      2    0.00%
+  #psram controller         0   out of      2    0.00%
+#pad                       21   out of     55   38.18%
+  #ireg                     0
+  #oreg                     0
+  #treg                     0
+#pll                        1   out of      2   50.00%
+
+Report Hierarchy Area:
++------------------------------------------------------------------+
+|Instance    |Module  |lut     |ripple  |seq     |bram    |dsp     |
++------------------------------------------------------------------+
+|top         |SF1_SOC |799     |1376    |965     |0       |0       |
+|  u_SF1_MCU |SF1_MCU |0       |0       |0       |0       |0       |
+|  u_ahb_pwm |ahb_pwm |799     |1376    |965     |0       |0       |
+|    pwm0    |counter |47      |172     |41      |0       |0       |
+|    pwm1    |counter |48      |172     |41      |0       |0       |
+|    pwm2    |counter |47      |172     |41      |0       |0       |
+|    pwm3    |counter |47      |172     |41      |0       |0       |
+|    pwm4    |counter |47      |172     |41      |0       |0       |
+|    pwm5    |counter |47      |172     |41      |0       |0       |
+|    pwm6    |counter |47      |172     |41      |0       |0       |
+|    pwm7    |counter |47      |172     |41      |0       |0       |
+|  u_pll     |pll     |0       |0       |0       |0       |0       |
++------------------------------------------------------------------+

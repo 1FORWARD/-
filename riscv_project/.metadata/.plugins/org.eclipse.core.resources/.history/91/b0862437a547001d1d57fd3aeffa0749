@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include "pwm.h"
+#include "control.h"
+
+#include "../../../../SoC/anlogic/Board/sf1_eval/Include/nuclei_sdk_hal.h"
+
+#define LEDn  3
+static uint32_t LED_CLORK[] = {SOC_LED_RED_GPIO_MASK, SOC_LED_GREEN_GPIO_MASK,SOC_LED_BLUE_GPIO_MASK};
+uint16_t temp;
+uint16_t x,y,w,h;
+
+void led_config(void)
+{
+    for(int i=0; i<LEDn; i++)
+    {
+        //gpio_iof_config(GPIO,LED_CLORK[i],IOF_SEL_DEF);
+        gpio_enable_output(GPIO,LED_CLORK[i]);
+        gpio_write(GPIO,LED_CLORK[i],1);
+    }
+}
+
+void uart0_handler(void)
+{
+
+    if(uart_get_flag_rxip(UART0)==2)
+    {
+    	temp=uart_read(UART0);
+    	Receive_Data(temp);
+
+		uart_clean_fifo(UART0);
+    }
+
+
+}
+
+int main(void)
+{
+	led_config();
+
+	__enable_irq();
+	ECLIC_Register_IRQ(UART0_IRQn, ECLIC_NON_VECTOR_INTERRUPT,
+	                                    ECLIC_LEVEL_TRIGGER, 1, 1,
+	                                    uart0_handler);
+
+	uart_init(UART0, 115200,UART_BIT_LENGTH_8);
+	uart_config_stopbit(UART0,UART_STOP_BIT_2);
+
+	uart_set_rx_watermark(UART0,0);
+	uart_enable_rxint(UART0);
+
+	int a,b,c;
+	c=a+b;
+
+	setpwm(0,1,5000,2500);
+	setpwm(1,1,5000,1000);
+	setpwm(2,9,200000,5000);   //2.5%
+	setpwm(3,9,200000,10000);  //5%
+    while(1)
+    {
+        for(int i=0; i<LEDn; i++)
+        {
+            gpio_toggle(GPIO,LED_CLORK[i]);
+            delay_1ms(1000);
+
+//            printf("gpio_toggle\r\n");
+            anl_printf("gpio_toggle\r\n");
+        }
+    }
+}
+
+

@@ -1,0 +1,22 @@
+sf1_6
+13 0 0 0 0 0 0
+infinity infinity SF1_SOC sf1_6 SF1S60CG121I Detail NA 17 0
+
+Timing group statistics: 
+	Clock constraints: 
+	  No constraint path
+	Minimum input arrival time before clock: no constraint path
+	Maximum output required time after clock: no constraint path
+	Maximum combinational path delay: no constraint path
+Warning: No clock constraint on 10 clock net(s): 
+	I_clk_25m_dup_1
+	u_ahb_pwm/I_ahb_clk
+	u_ahb_pwm/pwm0/clk_div_syn_3
+	u_ahb_pwm/pwm1/clk_div_syn_3
+	u_ahb_pwm/pwm2/clk_div_syn_3
+	u_ahb_pwm/pwm3/clk_div_syn_3
+	u_ahb_pwm/pwm4/clk_div_syn_3
+	u_ahb_pwm/pwm5/clk_div_syn_3
+	u_ahb_pwm/pwm6/clk_div_syn_3
+	u_ahb_pwm/pwm7/clk_div_syn_3
+
